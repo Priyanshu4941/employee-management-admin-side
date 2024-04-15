@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+    background-color: #444;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.navbar-text {
+    font-size: 20px;
+    margin: 0;
+    color: black;
+    font-size: 20px;
+}
+
+.logout-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+}
+
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .student-info p {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .logout-button {
+            float: right;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .logout-button:hover {
+            background-color: #c0392b;
+        }
+        form>button{
+            border-radius: 5px;
+        }
+        .student-image {
+    float: right; /* Float the image to the right side */
+    margin-left: 20px; /* Add some margin to separate it from student details */
+    max-width: 200px; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Employee Information</h1>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <div class="navbar">
+                <p class="navbar-text"><%=name %></p>
+                <form action=<%= route %> method="GET">
+                <button class="logout-button" type="submit">Back</button></form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <% for(var i=0;i<sdetails.length;i++) {%>
+            <div class="student-image">
+                <% if (sdetails[i] && sdetails[i].image && sdetails[i].image.data)
+              { %>
+              <!-- Display the image if it exists -->
+              <img
+                src="data:<%= sdetails[i].image.contentType %>;base64,<%= sdetails[i].image.data.toString('base64') %>"
+                alt="User Image"
+                height="150px"
+                width="150px"
+              />
+              <% } else { %>
+              <!-- Display a placeholder or message if no image is available -->
+              <p>No image available.</p>
+              <% } %>
+            </div>
+        <div class="student-info">
+            <p>Name : <%= " "+ sdetails[i].Name %></p>
+            <p>Roll No :<%= " "+ sdetails[i]._id %></p>
+            <p>Branch : <%= " "+ sdetails[i].Branch %></p>
+            <p>FirstName : <%= " "+ sdetails[i].FirstName %></p>
+            <p>LastName : <%= " "+ sdetails[i].LastName %></p>
+            <p>Joining Year : <%= " "+ sdetails[i].PassingYear %></p>
+            <p>Mobile : <%= " "+ sdetails[i].Mobile %></p>
+            <p>Email : <%= " "+ sdetails[i].Email %></p>
+            <p>Company_1 :<%=" "+sdetails[i].COMPANY_1 +"  "%>Package_1 :<%=" "+sdetails[i].PACKAGE_1 %></p>
+            <p>Company_2 :<%=" "+sdetails[i].COMPANY_2 +"  "%>Package_2 :<%=" "+sdetails[i].PACKAGE_2 %></p>
+            <p>Company_3 :<%=" "+sdetails[i].COMPANY_3 +"  "%>Package_3 :<%=" "+sdetails[i].PACKAGE_3 %></p>
+            <p>Company_4 :<%=" "+sdetails[i].COMPANY_4 +"  "%>Package_4 :<%=" "+sdetails[i].PACKAGE_4 %></p>
+            <p>Company_5 :<%=" "+sdetails[i].COMPANY_5 +"  "%>Package_5 :<%=" "+sdetails[i].PACKAGE_5 %></p>
+            <!-- <p>ID: 987654</p> -->
+        </div>
+        <br><hr><br>
+        <% } %>
+        <!-- Repeat the student info block for other students -->
+    </div>
+    <footer>
+        &copy; 2023-BlueEagle
+    </footer>
+</body>
+</html>

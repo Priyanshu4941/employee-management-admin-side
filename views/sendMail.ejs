@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Controls</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            min-height: 100vh;
+            max-width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(psitkanpur.jpg);
+            background-position: center;
+            background-size: cover;
+            background-position: relative;
+        }
+        header {
+            background-color: rgba(47, 184, 77, 0.489);
+            color: #fff;
+            padding: 20px 30px;
+            display: flex; /* Add display flex to arrange items horizontally */
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Vertically align items */
+        }
+
+        nav {
+            display: flex;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 22px;
+        }
+
+        main {
+            margin-top: 0px;
+            padding: 40px;
+            padding-top: 0px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 17px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 17px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 17px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            width: 105%;
+            padding: 10px;
+            font-size: 17px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: rgba(47, 184, 77, 0.489);
+            font-size: 20px;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .a {
+            background-color: rgba(47, 184, 77, 0.489);
+            display: inline-block;
+            font-size: 20px;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 50px;
+            margin-bottom: 0px;
+        }
+        img{
+            height: 100px;
+        }
+
+        button:hover {
+            background-color: rgba(40, 96, 52, 0.489);
+        }
+        .msg{
+        color: green;
+        font-size: 40px;
+        text-align: center;
+    }
+
+        /* Media query for screens less than 768px */
+        /* Media query for screens less than 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: rgb(18, 108, 36);
+        width: 100%;
+        margin: auto;
+
+    }
+
+    nav.active {
+        display: flex;
+    }
+    main {
+            margin-top: 10px;
+            padding: 40px;
+            text-align: center;
+        }
+
+    .menu-icon {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(54, 131, 71, 0.489);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .menu-icon:before {
+        content: '\2630';
+        font-size: 24px;
+    }
+
+    /* Toggle the 'active' class on click */
+    .menu-icon.active:before {
+        content: '\2715';
+    }
+    img{
+        height: 60px;
+    }
+    nav a {
+        margin: 10px 0; /* Add spacing between the links */
+        font-size: 25px;
+        padding: 5px 5px; /* Add padding to the links */
+    }
+    button {
+            background-color: rgba(47, 184, 77, 0.489);
+            color: #b5f4a8;
+            font-size: 15px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    a {
+            background-color: rgba(47, 184, 77, 0.489);
+            color: #b5f4a8;
+            font-size: 15px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgba(40, 108, 55, 0.489);
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(190, 252, 203, 0.543);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(190, 252, 203, 0.543);
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(190, 252, 203, 0.543);
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(190, 252, 203, 0.543);
+        }
+        .msg{
+        color: green;
+        font-size: 20px;
+        text-align: center;
+    }
+    }
+    
+
+    </style>
+</head>
+<body>
+    <div class="a">
+    <a href="/home" style="color: white;">Home</a>
+    </div>
+    <main>
+        <img src="/PSIT_logo_green.svg"  alt="logo" style="height: 75px;">
+        <form action="/sendMail" method="post" id="myForm">
+            <textarea name="mailMessage" id="mailMessage" cols="50" rows="50" required></textarea>
+            <button type="submit">Mail</button>
+        </form>
+    </main>
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            var menuIcon = document.querySelector('.menu-icon');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                menuIcon.classList.remove('active');
+            } else {
+                nav.classList.add('active');
+                menuIcon.classList.add('active');
+            }
+        }
+        window.onload = function() {
+    document.forms['myForm'].reset();
+};
+window.onpageshow = function(event) {
+        if (event.persisted) {
+            // Page was shown from the cache (e.g., after hitting the back button)
+            // Force a full page reload to clear form data
+            location.reload(true);
+        }
+    };
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(psit\ kanpur.jpg);
+  background-position: center;
+  background-size: cover;
+  background-position: relative;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.center-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2ecc7000;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+nav h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.course {
+  text-align: center;
+  padding: 30px 0;
+}
+.course h1 {
+  margin-top: 50px;
+  font-size: 55px;
+  color: white;
+  margin-bottom: 70px;
+}
+
+.course p {
+  font-size: 16px;
+  color: #f7f7f7;
+  margin-bottom: 40px;
+}
+
+/* .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.course-col {
+    flex: 1;
+    padding: 20px;
+    background-color:#2ecc7068;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin: 25px;
+} */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  /* flex-wrap: wrap;  Allow boxes to wrap to the next line if they don’t fit */
+}
+
+.course-col {
+  flex: 1 0 calc(22% - 20px);
+  padding: 20px;
+  background-color: #0b0372c7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  margin: 25px 0;
+  min-height: 180px;
+  color: white;
+}
+
+.course-col:hover {
+  transform: scale(1.05);
+}
+
+.logoutimg {
+  height: 50px;
+  margin-left: 35px;
+}
+
+
+@media (max-width: 768px) {
+  .logoutimg {
+    height: 30px;
+    margin-left: 15px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .course-col {
+    margin: 10px;
+  }
+  .course h1 {
+    margin-top: 20px;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 70px;
+  }
+  .course h3 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+  }
+  nav h1 {
+    font-size: 25px;
+    color: white;
+  }
+  nav img {
+    height: 55px;
+  }
+  nav {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+.ul {
+  color: #0b0372c7;
+}

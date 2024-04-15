@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlumNet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .row {
+    display: flex;
+    justify-content: space-around; /* To push the divs to either end */
+}
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <img src=".//PSIT_logo_green.svg" alt="psit-logo" id="psit-logo" height="100px">
+            <h1><u>Employee</u><u class="ul"><span>Net</u></span><a href="/logout"><img class="logoutimg" src="logoutImg.png" alt="logout button"></a></h1>
+        </nav>
+        <section class="course">
+            <h1>EmployeeNet Admin</h1>
+            <div class="row">
+                <a href="/admin/find">
+                <div class="course-col">
+                    <h3>Search Employee</h3>
+                    <br>
+                    <p>Find by Name , Find by Employee ID<br>
+                        Find by Joining Year , and many more
+                    </p>
+                </div></a>
+                <a href="/addNewUser">
+                <div class="course-col">
+                    <h3>Add An Employee to Platform</h3>
+                    <br>
+                    <p>Add any Employee, So that they can join This Portal</p>
+                </div></a>
+                <a href="/uploadInfo">
+                <div class="course-col">
+                    
+                    <h3>Upload Notification and Guidlines</h3>
+                    <br>
+                    <p>Upload Info for The Employee who are Connected With this Portal</p>
+                </div></a>
+
+            </div>
+        </section>
+        </div>
+
+        <section class="footer">
+            <!-- footer content -->
+        </section>
+    </section>
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+    const navbarContainer = document.querySelector('.navbar-container'); // Select the .navbar-container element
+
+    menuIcon.addEventListener('click', () => {
+    navbarContainer.classList.toggle('hide-navbar'); // Toggle the class on .navbar-container
+});
+
+    </script>
+</body>
+</html>

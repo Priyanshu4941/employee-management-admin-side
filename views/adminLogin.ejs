@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EmployeeNet</title>
+    <link rel="stylesheet" href="newResponsiveHomepage.css">
+    <!-- Link to your CSS file for the login page -->
+    <style>
+        /* Import your common styles from ResponsiveHomepage.css */
+/* Specific styles for the login page */
+body {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(psit_kanpur.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* Fixed background image */
+}
+
+/*  .login-box {
+    text-align: center;
+    background-color: rgba(65, 63, 63, 0.614); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    width: 80%;
+    max-width: 400px; 
+}   */
+.login-box {
+    text-align: center;
+    background-color:rgba(254, 254, 254, 0.575); 
+    padding: 40px 30px;  
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    width: 90%;  
+    max-width: 450px; 
+}
+
+
+.login-box h1 {
+    color: #0b0372c7;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(254, 254, 254, 0.107); /* Semi-transparent input background */
+    color: #fff;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: #0b0372c7;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.login-form button:hover {
+    background: #120d4dc7; /* Slightly transparent on hover */
+}
+
+
+/* Media query for responsiveness */
+/* Media query for responsiveness */
+@media (max-width: 700px) {
+    .login-box {
+        width: 85%; /* Adjust width for smaller screens */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .login-form input {
+        width: 90%;
+        margin: 10x 1px; /* Reduce margin for smaller screens */
+        padding: 8px;
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .login-form button {
+        padding: 10px;
+        font-size: 20px; /* Adjust font size for smaller screens */
+        width: 95%;
+        margin: 10px;
+    }
+    .login-box h1 {
+    color: #0b0372c7;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+}
+@media (min-width: 700px) {
+    .login-box {
+        width: 85%; /* Adjust width for smaller screens */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .login-form input {
+        width: 90%;
+        margin: 10x 1px; /* Reduce margin for smaller screens */
+        padding: 8px;
+        font-size: 22px; /* Adjust font size for smaller screens */
+    }
+
+    .login-form button {
+        padding: 10px;
+        font-size: 22px; /* Adjust font size for smaller screens */
+        width: 95%;
+        margin: 10px;
+    }
+}
+    /* Styling for the "Not a member?" text and "Register" link */
+.login-box p {
+    margin-top: 15px; /* Add some space between the login button and the text */
+    margin-bottom: 10px;
+    color: #fff; /* Text color */
+    font-size: 14px; /* Font size */
+}
+
+.login-box a {
+    color: #0b0372c7; /* Link color */
+    text-decoration: none; /* Remove underlines from the link */
+    font-weight: bold; /* Make the link text bold */
+    margin-left: 5px; /* Add some space between the text and the link */
+}
+
+.login-box a:hover {
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Styling for the "Not a member?" text and "Register" link */
+.login-box p {
+    margin-top: 15px; /* Add some space between the login button and the text */
+    margin-bottom: 10px;
+    color: #fff; /* Text color */
+    font-size: 14px; /* Font size */
+}
+
+.login-box a {
+    color: #0b0372c7; /* Link color */
+    text-decoration: none; /* Remove underlines from the link */
+    font-weight: bold; /* Make the link text bold */
+    margin-left: 5px; /* Add some space between the text and the link */
+}
+
+.login-box a:hover {
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Input field focus and hover styles */
+.login-form input:focus {
+    border: 2px solid #0b0372c7; /* Change border color on focus */
+    background-color: rgba(254, 254, 254, 0.2); /* Change background color on focus */
+}
+
+.login-form input:hover {
+    background-color: rgba(254, 254, 254, 0.2); /* Change background color on hover */
+}
+
+/* Button focus and hover styles */
+.login-form button:focus {
+    background: #0b0372c7; /* Change background color on focus */
+}
+
+.login-form button:hover {
+    background: #0b0372c7; /* Slightly transparent on hover */
+    transition: background 0.5s;
+}
+.login-box p {
+    margin-top: 0px; /* Add some space between the login button and the text */
+    margin-bottom: 0px; /* Reduce space between the two paragraphs */
+    color: #fff; /* Text color */
+    font-size: 14px; /* Font size */
+}
+/* Styling for the error message */
+.error-message {
+    color: #ff0000; /* Change the text color to red */
+}
+
+    </style>
+</head>
+<body>
+    <section class="header">
+        <!-- Header content from your "Get Started" page -->
+        <nav>
+            <img src=".//PSIT_logo_green.svg" alt="psit-logo" id="psit-logo">
+            <h1><u>Employee</u><u class="ul"><span>Net</u></span></h1>
+        </nav>
+    </section>
+    <section class="text-box login-box">
+        <h1>Admin Login</h1>
+        <div id="error-message" class="error-message"><%= message %></div>
+        <form class="login-form" action="/admin" method="POST">
+            <input type="text" name="username" placeholder="username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button class="hero-btn" type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Footer and other sections if needed -->
+<script>
+    window.onpageshow = function(event) {
+        if (event.persisted) {
+            // Page was shown from the cache (e.g., after hitting the back button)
+            // Force a full page reload to clear form data
+            location.reload(true);
+        }
+    };
+
+</script>
+</body>
+</html>

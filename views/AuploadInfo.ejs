@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmployeeNet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .row {
+    display: flex;
+    justify-content: space-around; /* To push the divs to either end */
+}
+.a {
+            background-color: rgba(47, 184, 77, 0.489);
+            display: inline-block;
+            font-size: 20px;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 50px;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <a href="/home" style="color: white;"><div class="a">Home</div></a>
+        <section class="course">
+            <h1>Upload Info At EmployeeNet Portal</h1>
+
+            <div class="row">
+                <a href="/job-internship-updates">
+                <div class="course-col">
+                    <h3 style="color: white;">Applications/Requests</h3>
+                    <br>
+                    <p>Get all the applications and requests submitted by the employee's at one place
+                    </p>
+                </div></a>
+                <a href="/uploadNotice">
+                <div class="course-col">
+                    <h3>Update Notice Board For Employee's</h3>
+                    <br>
+                    <p>Upload new Information to the notice board, and share it with all the Employee's of the Company
+                    </p>
+                </div></a>
+                
+            </div>
+        </section>
+        </div>
+
+        <section class="footer">
+            <!-- footer content -->
+        </section>
+    </section>
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+    const navbarContainer = document.querySelector('.navbar-container'); // Select the .navbar-container element
+
+    menuIcon.addEventListener('click', () => {
+    navbarContainer.classList.toggle('hide-navbar'); // Toggle the class on .navbar-container
+});
+
+    </script>
+</body>
+</html>
