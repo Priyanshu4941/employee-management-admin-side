@@ -243,8 +243,8 @@ app.post("/admin/findName/name", (req, res) => {
     if (req.session.isAuthorised) {
         console.log(req.body);
         var name = (req.body.name).toUpperCase().trim();
-        console.log(name);
-        student.find({ Name: name })
+        const regex = new RegExp(name, 'i');
+        student.find({ Name: { $regex: regex } })
             .then(details => {
                 //console.log(details);
                 if (details.length == 0) {

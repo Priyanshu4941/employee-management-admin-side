@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Information</title>
+    <title>Employee Information</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -91,7 +91,10 @@
     max-width: 200px; /* Set a maximum width for the image */
     height: auto; /* Maintain aspect ratio */
 }
-
+    span{
+        font-size: 18px;
+        font-weight: bold;
+    }
     </style>
 </head>
 <body>
@@ -125,28 +128,37 @@
               <p>No image available.</p>
               <% } %>
             </div>
-        <div class="student-info">
-            <p>Name : <%= " "+ sdetails[i].Name %></p>
-            <p>Roll No :<%= " "+ sdetails[i]._id %></p>
-            <p>Branch : <%= " "+ sdetails[i].Branch %></p>
-            <p>FirstName : <%= " "+ sdetails[i].FirstName %></p>
-            <p>LastName : <%= " "+ sdetails[i].LastName %></p>
-            <p>Joining Year : <%= " "+ sdetails[i].PassingYear %></p>
-            <p>Mobile : <%= " "+ sdetails[i].Mobile %></p>
-            <p>Email : <%= " "+ sdetails[i].Email %></p>
-            <p>Company_1 :<%=" "+sdetails[i].COMPANY_1 +"  "%>Package_1 :<%=" "+sdetails[i].PACKAGE_1 %></p>
-            <p>Company_2 :<%=" "+sdetails[i].COMPANY_2 +"  "%>Package_2 :<%=" "+sdetails[i].PACKAGE_2 %></p>
-            <p>Company_3 :<%=" "+sdetails[i].COMPANY_3 +"  "%>Package_3 :<%=" "+sdetails[i].PACKAGE_3 %></p>
-            <p>Company_4 :<%=" "+sdetails[i].COMPANY_4 +"  "%>Package_4 :<%=" "+sdetails[i].PACKAGE_4 %></p>
-            <p>Company_5 :<%=" "+sdetails[i].COMPANY_5 +"  "%>Package_5 :<%=" "+sdetails[i].PACKAGE_5 %></p>
-            <!-- <p>ID: 987654</p> -->
-        </div>
+            <div class="student-info">
+    <p><span>Name : </span><%= sdetails[i].Name ? " " + sdetails[i].Name : "" %></p>
+    <p><span>Roll No :</span><%= sdetails[i]._id ? " " + sdetails[i]._id : "" %></p>
+    <p><span>Branch : </span><%= sdetails[i].Branch ? " " + sdetails[i].Branch : "" %></p>
+    <p><span>Joining Year : </span><%= sdetails[i].PassingYear ? " " + sdetails[i].PassingYear : "" %></p>
+    <p><span>Mobile : </span><%= sdetails[i].Mobile ? " " + sdetails[i].Mobile : "" %></p>
+    <p><span>Email : </span><%= sdetails[i].Email ? " " + sdetails[i].Email : "" %></p>
+    <% if (sdetails[i].COMPANY_1 && sdetails[i].PACKAGE_1) { %>
+        <p><span>Skill 1 :</span><%= " " + sdetails[i].COMPANY_1 %> <span>Experience Duration :</span><%= " " + sdetails[i].PACKAGE_1 %></p>
+    <% } %>
+    <% if (sdetails[i].COMPANY_2 && sdetails[i].PACKAGE_2) { %>
+        <p><span>Skill 2 :</span><%= " " + sdetails[i].COMPANY_2 %> <span>Experience Duration :</span><%= " " + sdetails[i].PACKAGE_2 %></p>
+    <% } %>
+    <% if (sdetails[i].COMPANY_3 && sdetails[i].PACKAGE_3) { %>
+        <p><span>Skill 3 :</span><%= " " + sdetails[i].COMPANY_3 %> <span>Experience Duration :</span><%= " " + sdetails[i].PACKAGE_3 %></p>
+    <% } %>
+    <% if (sdetails[i].COMPANY_4 && sdetails[i].PACKAGE_4) { %>
+        <p><span>Skill 4 :</span><%= " " + sdetails[i].COMPANY_4 %> <span>Experience Duration :</span><%= " " + sdetails[i].PACKAGE_4 %></p>
+    <% } %>
+    <% if (sdetails[i].COMPANY_5 && sdetails[i].PACKAGE_5) { %>
+        <p><span>Skill 5 :</span><%= " " + sdetails[i].COMPANY_5 %> <span>Experience Duration :</span><%= " " + sdetails[i].PACKAGE_5 %></p>
+    <% } %>
+    <!-- <p>ID: 987654</p> -->
+</div>
+
         <br><hr><br>
         <% } %>
-        <!-- Repeat the student info block for other students -->
+        <!-- Repeat the Employee info block for other students -->
     </div>
     <footer>
-        &copy; 2023-BlueEagle
+        &copy; 2024-EmployeeNet
     </footer>
 </body>
 </html>
